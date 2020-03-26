@@ -11,6 +11,7 @@ import Equipment from '../app/models/Equipment';
 import Lab from '../app/models/Lab';
 import Appointment from '../app/models/Appointment';
 import Booking from '../app/models/Booking';
+import Request from '../app/models/Request';
 
 /* --------------------------------- CONTENT ---------------------------------*/
 /* Cria array com todos os models da aplicacao */
@@ -24,6 +25,7 @@ const models = [
   Lab,
   Appointment,
   Booking,
+  Request
 ];
 
 /*
