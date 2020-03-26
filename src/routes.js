@@ -10,6 +10,7 @@ import SessionController from './app/controllers/SessionController';
 import EquipmentController from './app/controllers/EquipmentController';
 import NotificationController from './app/controllers/NotificationController';
 import AvailableController from './app/controllers/AvailableController';
+import RequestController from './app/controllers/RequestController';
 
 /* --------------------------------- CONTENT ---------------------------------*/
 /** Instancia novo roteador Router do express */
@@ -33,7 +34,22 @@ routes.put('/users', UserController.update);
 /**
  * Define rota POST para upload de arquivos (com middleware local)
  * Middleware chama variavel upload, metodo 'single' para fazer upload de
- * um arquivo por vez */
+
+ * um arquivo por vez
+ */
+routes.post('/files', upload.single('file'), FileController.store);
+
+/** Define rota POST para criar novo equipamento */
+routes.post('/equipment', EquipmentController.store);
+
+/** Define rota PUT para editar dados do equipamento */
+routes.put('/equipment', EquipmentController.update);
+/** Define rota POST para criar nova demanda */
+routes.post('/requests', RequestController.store);
+
+/** Define rota PUT para editar dados da demanda */
+routes.put('/requests', RequestController.update);
+
 /** Define rota GET para consulta de notificacoes do prestador de servico */
 routes.get('/notifications', NotificationController.index);
 /** Define rota PUT para marcar notificacoes como lidas */

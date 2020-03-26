@@ -4,10 +4,19 @@ import mongoose from 'mongoose';
 import databaseConfig from '../config/database';
 import User from '../app/models/User';
 import Equipment from '../app/models/Equipment';
+import Request from '../app/models/Request';
+
 
 /* --------------------------------- CONTENT ---------------------------------*/
 /* Cria array com todos os models da aplicacao */
-const models = [User, Equipment];
+const models = [
+  User,
+ 
+  Equipment,
+ 
+  Request
+];
+
 
 /*
  ** Cria classe Database
