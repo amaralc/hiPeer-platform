@@ -3,28 +3,11 @@ import Sequelize from 'sequelize';
 import mongoose from 'mongoose';
 import databaseConfig from '../config/database';
 import User from '../app/models/User';
-import File from '../app/models/File';
-import Room from '../app/models/Room';
-import Container from '../app/models/Container';
-import Tool from '../app/models/Tool';
 import Equipment from '../app/models/Equipment';
-import Lab from '../app/models/Lab';
-import Appointment from '../app/models/Appointment';
-import Booking from '../app/models/Booking';
 
 /* --------------------------------- CONTENT ---------------------------------*/
 /* Cria array com todos os models da aplicacao */
-const models = [
-  User,
-  File,
-  Room,
-  Container,
-  Tool,
-  Equipment,
-  Lab,
-  Appointment,
-  Booking,
-];
+const models = [User, Equipment];
 
 /*
  ** Cria classe Database
