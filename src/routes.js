@@ -20,6 +20,7 @@ import AppointmentController from './app/controllers/AppointmentController';
 import ProviderScheduleController from './app/controllers/ProviderScheduleController';
 import NotificationController from './app/controllers/NotificationController';
 import AvailableController from './app/controllers/AvailableController';
+import RequestController from './app/controllers/RequestController';
 
 /* --------------------------------- CONTENT ---------------------------------*/
 /** Instancia novo roteador Router do express */
@@ -66,7 +67,11 @@ routes.post('/equipment', EquipmentController.store);
 
 /** Define rota PUT para editar dados do equipamento */
 routes.put('/equipment', EquipmentController.update);
+/** Define rota POST para criar nova demanda */
+routes.post('/requests', RequestController.store);
 
+/** Define rota PUT para editar dados da demanda */
+routes.put('/requests', RequestController.update);
 /** Define rota POST para criar novo laboratório */
 routes.post('/labs', LabController.store);
 /** Define rota PUT para editar informações de laboratório */
