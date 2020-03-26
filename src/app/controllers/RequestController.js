@@ -1,7 +1,7 @@
 /* --------------------------------- IMPORTS ---------------------------------*/
 /** Importa tudo de yup como Yup (dependencia nao tem export default) */
 import * as Yup from 'yup';
-import Equipment from '../models/Equipment';
+import Request from '../models/Request';
 
 /* --------------------------------- CONTENT ---------------------------------*/
 class RequestController {
@@ -36,8 +36,8 @@ class RequestController {
       solicitante: Yup.string().required(),
       /** Attribute 'produto' is string */
       produto: Yup.string().required(),
-      /** Attribute 'quantidade' is a required string */
-      quantidade: Yup.string().required(),
+      /** Attribute 'quantidade' is a required number */
+      quantidade: Yup.number().required(),
       /** Attribute 'destino' is a required string */
       destino: Yup.string().required(),
       /** Attribute 'data_pedido' is a required date */
@@ -101,7 +101,7 @@ class RequestController {
       /** Attribute 'produto' is string */
       produto: Yup.string(),
       /** Attribute 'quantidade' is a required string */
-      quantidade: Yup.string(),
+      quantidade: Yup.number(),
       /** Attribute 'destino' is a required string */
       destino: Yup.string(),
       /** Attribute 'data_pedido' is a required date */
