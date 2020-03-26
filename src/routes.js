@@ -44,6 +44,8 @@ routes.post('/equipment', EquipmentController.store);
 
 /** Define rota PUT para editar dados do equipamento */
 routes.put('/equipment', EquipmentController.update);
+/** Define rota GET para listagem demandas */
+routes.get('/requests', RequestController.index);
 /** Define rota POST para criar nova demanda */
 routes.post('/requests', RequestController.store);
 
