@@ -77,18 +77,18 @@ class App {
     this.server.use(async (err, req, res, next) => {
       /**
        * Retorna erros detalhados apenas em ambiente de desenvolvimento
-       */
+      */
       if (process.env.NODE_ENV === 'development') {
         const errors = await new Youch(err, req).toJSON();
         /**
          * Retorna erro de servidor em formato json
-         */
+        */
         return res.status(500).json(errors);
       }
 
       /**
        * Em ambiente de produção, retorna mensagem simplificada
-       */
+      */
       return res.status(500).json({ error: 'Internal server error' });
     });
   }
