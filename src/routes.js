@@ -69,7 +69,8 @@ routes.post('/equipment', EquipmentController.store);
 routes.put('/equipment', EquipmentController.update);
 /** Define rota POST para criar nova demanda */
 routes.post('/requests', RequestController.store);
-
+/** Define rota GET para listagem demandas */
+routes.get('/requests', RequestController.index);
 /** Define rota PUT para editar dados da demanda */
 routes.put('/requests', RequestController.update);
 /** Define rota POST para criar novo laboratório */
