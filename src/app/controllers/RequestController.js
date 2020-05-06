@@ -15,6 +15,7 @@ class RequestController {
       /** 'attributes' filtra os dados que serão mostrados ao usuário */
       attributes: [
         'solicitante',
+        'contato',
         'produto',
         'quantidade',
         'destino',
@@ -34,6 +35,8 @@ class RequestController {
     const schema = Yup.object().shape({
       /** Attribute 'solicitante' is a required string */
       solicitante: Yup.string().required(),
+      /** Attribute 'contato' is a required number */
+      contato: Yup.number().required(),
       /** Attribute 'produto' is string */
       produto: Yup.string().required(),
       /** Attribute 'quantidade' is a required number */
@@ -58,6 +61,7 @@ class RequestController {
      */
     const {
       solicitante,
+      contato,
       produto,
       quantidade,
       destino,
@@ -67,6 +71,7 @@ class RequestController {
 
     const { id, created_by, updated_by } = await Equipment.create({
       solicitante,
+      contato,
       produto,
       quantidade,
       destino,
@@ -80,6 +85,7 @@ class RequestController {
     return res.json({
       id,
       solicitante,
+      contato,
       produto,
       quantidade,
       destino,
@@ -98,6 +104,8 @@ class RequestController {
       id: Yup.number().required(),
       /** Attribute 'solicitante' is a required string */
       solicitante: Yup.string(),
+      /** Attribute 'contato' is a required number */
+      contato: Yup.number(),
       /** Attribute 'produto' is string */
       produto: Yup.string(),
       /** Attribute 'quantidade' is a required string */
@@ -118,6 +126,7 @@ class RequestController {
     /** Desestrutura e salva informações do corpo da requisição */
     const {
       solicitante,
+      contato,
       produto,
       quantidade,
       destino,
@@ -128,6 +137,7 @@ class RequestController {
     /** If all requirements were met then updates user informaiton */
     const { id, updated_by } = await equipment.update({
       solicitante,
+      contato,
       produto,
       quantidade,
       destino,
@@ -140,6 +150,7 @@ class RequestController {
     return res.json({
       id,
       solicitante,
+      contato,
       produto,
       quantidade,
       destino,
