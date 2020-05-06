@@ -6,8 +6,9 @@ class Request extends Model {
     super.init(
       {
         solicitante: Sequelize.STRING,
+        contato: Sequelize.INTEGER,
         produto: Sequelize.STRING,
-        quantidade: Sequelize.NUMBER,
+        quantidade: Sequelize.INTEGER,
         destino: Sequelize.STRING,
         data_pedido: Sequelize.DATE,
         data_entrega: Sequelize.DATE,
