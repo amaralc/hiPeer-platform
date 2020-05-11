@@ -50,13 +50,9 @@
   * Renomeia database;
 
   * (terminal) Interrompe conexao com container: `docker stop postgres-hipeerlab-platform` ;
-
   * (terminal) Visualiza todos os containers que tem na maquina: `docker ps -a` ;
-
   * (terminal) Inicia conexao com container: `docker start postgres-hipeerlab-platform` ;
-
   * (terminal) Confere se container esta rodando: `docker ps` ;
-
   * (terminal) Visualiza log de erros do container: `docker logs postgres-hipeerlab-platform` ;
 
   * Para remover um container, primeiro interrompa a conexão executando o comando `docker stop NomeDoContainer` e em seguida execute o comando para remover: `docker rm NomeDoContainer`
@@ -74,15 +70,15 @@
       "it looks like you are trying to access MongoDB over HTTP on the native driver port"
 
   * Instala dependência mongoose
-    *(terminal) Comando: yarn add mongoose
 
-  * (terminal) Inicia conexao com container: `docker start mongo-hipeerlab-platform`
-  * (terminal) Roda `docker ps -a` para checar se container está rodando "STATUS: Up"
+    * (terminal) Comando: `yarn add mongoose`
+    * (terminal) Inicia conexao com container: `docker start mongo-hipeerlab-platform`
+    * (terminal) Roda `docker ps -a` para checar se container está rodando "STATUS: Up"
 
-  * Fazer download da ferramenda MongoDB Compass Community em https://www.mongodb.com/download-center/compass
+  * Faz download da ferramenda MongoDB Compass Community em https://www.mongodb.com/download-center/compass
   para visualização dos dados de notificação
 
-   * Se surgir alguma dúvida na instalação, assitir, a partir de 11'30'', a aula: https://skylab.rocketseat.com.br/node/continuando-api-do-go-barber/group/envio-de-notificacoes/lesson/notificando-novos-agendamentos-1
+   * Se surgir alguma dúvida na instalação, assitir, a partir de 11'30'', a aula [notificando novos agendamentos](https://skylab.rocketseat.com.br/node/continuando-api-do-go-barber/group/envio-de-notificacoes/lesson/notificando-novos-agendamentos-1)
 
    *Enviar agendamento pelo insomnia (Appointments -> Post) e checar se chegou uma notificação no MongoDB Compass Community
 
