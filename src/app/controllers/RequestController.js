@@ -69,7 +69,7 @@ class RequestController {
       data_entrega,
     } = req.body;
 
-    const { id, created_by, updated_by } = await Equipment.create({
+    const { id, created_by, updated_by } = await Request.create({
       solicitante,
       contato,
       produto,
